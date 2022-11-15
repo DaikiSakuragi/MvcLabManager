@@ -15,12 +15,12 @@ public class LaboratoryController : Controller
     public IActionResult Index()
     {
 
-        return View(_context.Laboratory);
+        return View(_context.Laboratorys);
     }
 
     public IActionResult Show(int id)
     {
-        Laboratory? laboratory =_context.Laboratory.Find(id);
+        Laboratory? laboratory =_context.Laboratorys.Find(id);
 
         if(laboratory == null)
         {
@@ -37,7 +37,7 @@ public class LaboratoryController : Controller
     public IActionResult Creation(int id, int number, string name, string block){
         if(_context.Laboratorys.Find(id) == null)
         {
-            _context.Laboratorys.Add(new Computer(id,number,name,block));
+            _context.Laboratorys.Add(new Laboratory(id,number,name,block));
             _context.SaveChanges();
             return RedirectToAction("Create");
         }
