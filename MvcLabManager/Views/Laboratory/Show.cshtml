@@ -1,12 +1,13 @@
-@model MvcLabManager.Models.Computer;
+@model MvcLabManager.Models.Laboratory;
 
 @{
-    ViewData["Title"] = $"Computadores {Model.Id}";
+    ViewData["Title"] = $"Laboratorys {Model.Id}";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p><b>Id: </b> @Model.Id</p>
-<p><b>Ram: </b> @Model.Ram</p>
-<p><b>Processor: </b> @Model.Processor</p>
+<p><b>Number: </b> @Model.Number</p>
+<p><b>Name: </b> @Model.Name</p>
+<p><b>Block: </b> @Model.Block</p>
 
 
